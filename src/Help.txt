@@ -1,0 +1,141 @@
+SIMPLE LINE EDITOR - HELP
+
+DESCRIPTION
+
+This is a command-line line editor written in C. The editor stores document
+lines using a dynamic array of strings and supports inserting, deleting,
+displaying, saving, loading, searching, and counting document content.
+
+COMMANDS
+
+1. INSERT
+
+Purpose: Insert a new line at a specified line number.
+Syntax: insert <line> <text>
+Example: insert 1 Hello World
+
+2. DELETE
+
+Purpose: Delete an existing line from the document.
+Syntax: delete <line>
+Example: delete 2
+
+3. DISPLAY
+
+Purpose: Display all lines currently stored in the document with their line numbers.
+Syntax: display
+Example: display
+
+4. SAVE
+
+Purpose: Save the current document to a text file.
+Syntax: save <filename>
+Example: save document.txt
+
+5. LOAD
+
+Purpose: Load a text file into the editor.
+Syntax: load <filename>
+Example: load document.txt
+
+6. SEARCH
+
+Purpose: Search for a word or phrase in the document and display matching line numbers.
+Syntax: search <word or phrase>
+Example: search Hello
+
+7. COUNT
+
+Purpose: Display the number of lines and words in the document.
+Syntax: count
+Example: count
+
+8. HELP
+
+Purpose: Display the available commands and their usage.
+Syntax: help
+Example: help
+
+9. QUIT / EXIT
+
+Purpose: Exit the line editor.
+Syntax: quit
+Example: quit
+
+Alternative command:
+exit
+
+Example: exit
+
+ERROR HANDLING
+
+The editor handles common invalid inputs, including:
+
+- Invalid line numbers
+- Attempting to delete a line that does not exist
+- Invalid commands
+- Incorrect command arguments
+- Displaying an empty document
+- File open errors
+- Memory allocation errors
+
+COMPILATION
+
+Compile using GCC:
+
+gcc -Wall -Wextra -std=c11 src/main.c -o editor
+
+RUNNING
+
+Windows:
+.\editor.exe
+
+Linux/macOS:
+./editor
+
+EXAMPLE SESSION
+
+> insert 1 Hello World
+Line inserted successfully.
+
+> insert 2 Welcome to C
+Line inserted successfully.
+
+> display
+
+========== DOCUMENT ==========
+  1 | Hello World
+  2 | Welcome to C
+==============================
+
+> search Hello
+Found on line(s): 1
+
+> count
+
+Document Statistics
+-------------------
+Lines : 2
+Words : 4
+
+> save document.txt
+Document saved successfully to 'document.txt'.
+
+> delete 1
+Line 1 deleted successfully.
+
+> display
+
+========== DOCUMENT ==========
+  1 | Welcome to C
+==============================
+
+> quit
+
+Goodbye!
+
+TEAM MEMBERS
+
+Insha Ahmed - R25EJ043
+J Karthik Raj - R25EJ045
+Krithik D Shetty - R25EJ056
